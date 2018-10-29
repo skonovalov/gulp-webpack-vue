@@ -1,0 +1,327 @@
+.header {
+	{cfix}
+	position fixed
+	top 0
+	left 0
+	z-index 1
+	width 100%
+	height 60px
+	overflow hidden
+	background #fff
+	border-bottom 1px solid #eee
+	box-shadow 0 0 10px 5px rgba(0, 0, 0, 0.2)
+
+	@media screen and (min-width: $screen-sm) {
+		overflow visible
+		background-color rgba(#fff, 0)
+		border 0
+		box-shadow none
+		height 100px
+		transition height .3s ease, background .3s ease
+	}
+
+	@media screen and (min-width: $screen-md) {
+		height 120px
+	}
+
+	&__wrapper {
+		position relative
+	}
+
+	&__logo {
+		display block
+		position absolute
+		top 11px
+		left 25px
+		z-index 1
+		width 40px
+
+		@media screen and (min-width: $screen-sm) {
+			width 190px
+			text-decoration none
+
+			img {
+				display inline-block
+				vertical-align middle
+				width 38px
+			}
+		}
+
+		@media screen and (min-width: $screen-md) {
+			width 210px
+			left 30px
+
+			img {
+				width 58px
+			}
+		}
+	}
+
+	&__logo-name {
+		display none
+		font-size 14px
+
+		span {
+			display block
+			font-size 18px
+			font-weight 500
+			letter-spacing 17px
+			text-transform uppercase
+		}
+
+		@media screen and (min-width: $screen-sm) {
+			display inline-block
+			vertical-align middle
+			margin-left 10px
+			color #fff
+		}
+
+		@media screen and (min-width: $screen-md) {
+			font-size 16px
+			line-height 30px
+
+			span {
+				font-size 23px
+			}
+		}
+	}
+
+	&__phone {
+		float right
+		padding-top 18px
+		padding-right 80px
+		text-decoration none
+		font-size 20px
+		color $top
+		font-weight 500
+
+		@media screen and (min-width: $screen-sm) {
+			display none
+		}
+	}
+
+	&__menu {
+		transition right .3s ease
+
+		a {
+			display block
+			color #fff
+			font-size 18px
+			line-height 40px
+			text-decoration none
+			transition color .3s ease
+		}
+
+		.header__phone {
+			display none
+		}
+
+		nav {
+			display none
+		}
+
+
+		@media screen and (max-width: $screen-sm - 1px) {
+			position fixed
+			top 0
+			right -250px
+			width 250px
+			height 100%
+			padding-top 60px
+			padding-left 20px
+			background-color $top
+
+			nav {
+				display block
+				margin-top 20px
+
+				p {
+					font-size 14px
+					line-height 20px
+					color #fff
+				}
+				a {
+					display inline-block
+					vertical-align middle
+					background none
+				}
+
+				a + a {
+					margin-left 20px
+				}
+
+				img {
+					top 0
+					width 80%
+				}
+			}
+		}
+
+		@media screen and (min-width: $screen-sm) {
+			float right
+			width 70%
+			padding-top 10px
+			padding-bottom 0
+			padding-right 20px
+			text-align right
+
+			ul {
+				display inline-block
+				vertical-align middle
+
+				a {
+					position relative
+					border-bottom 0
+					margin 0 15px
+					font-size 14px
+
+					&:before {
+						content ''
+						display block
+						position absolute
+						left 50%
+						bottom -5px
+						right 50%
+						height 2px
+						margin 0 auto
+						background-color #fff
+						opacity 0
+						transition all .3s ease
+					}
+
+					&:hover {
+						&:before {
+							left 0
+							right 0
+							opacity 1
+						}
+					}
+				}
+			}
+
+			li {
+				display inline-block
+				vertical-align middle
+			}
+
+			.header__phone {
+				float none
+				display inline-block
+				vertical-align middle
+				padding-top 0
+				padding-right 15px
+				font-size 18px
+			}
+		}
+
+		@media screen and (min-width: $screen-md) {
+			padding-top 20px
+
+			ul {
+				a {
+					font-size 18px
+				}
+			}
+
+			.header__phone {
+				font-size 24px
+			}
+		}
+	}
+
+	&__btn {
+		display none
+		position absolute
+		top 20px
+		right 25px
+		width 22px
+		cursor pointer
+		transition transform .3s ease-in-out
+		will-change transform
+
+		span {
+			display block
+			width 100%
+			height 3px
+			margin-bottom 4px
+			background-color $light-text
+			transition background .3s ease
+
+			&:last-child {
+				margin-bottom 0
+			}
+		}
+
+		@media screen and (max-width: $screen-sm - 1px) {
+			display block
+		}
+	}
+}
+
+.header-fixed  {
+	@media screen and (min-width: $screen-sm) {
+		height 60px
+		background-color #fff
+		box-shadow 0 0 10px 5px rgba(0, 0, 0, 0.2)
+
+		.header {
+			&__menu {
+				ul {
+					a {
+						color $light-text
+
+						&:hover {
+							color $top
+
+							&:before {
+								background-color $top
+							}
+						}
+					}
+
+					.active {
+						color $top
+
+						&:before {
+							background-color $top
+						}
+					}
+				}
+			}
+
+			&__logo-name {
+				color $text
+			}
+
+			&__phone {
+				color $top
+			}
+		}
+	}
+
+	@media screen and (min-width: $screen-md) {
+		height 80px
+	}
+}
+
+.header.open {
+	overflow visible
+
+	.header {
+		&__menu {
+			@media screen and (max-width: $screen-sm - 1px) {
+				right 0
+			}
+		}
+
+		&__btn {
+			@media screen and (max-width: $screen-sm - 1px) {
+				transform rotate(90deg)
+
+				span {
+					background-color #fff
+				}
+			}
+		}
+	}
+}

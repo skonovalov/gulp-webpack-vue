@@ -1,0 +1,19 @@
+.about {
+
+	@media screen and (min-width: $screen-sm) {
+		h2,p {
+			opacity 0
+			transform translateY(500px)
+			transition all .3s ease
+		}
+	}
+}
+
+.about.animate {
+	@media screen and (min-width: $screen-sm) {
+		h2, p {
+			opacity 1
+			transform translateY(0)
+		}
+	}
+}

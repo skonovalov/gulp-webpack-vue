@@ -1,0 +1,87 @@
+font-face {
+	font-family: 'iconfont';
+	src: url('iconfont.eot?1540847429412');
+	src: url('iconfont.eot?#iefix-1540847429412') format('embedded-opentype'),
+		url('iconfont.woff2?1540847429412') format('woff2'),
+		url('iconfont.woff?1540847429412') format('woff'),
+		url('iconfont.ttf?1540847429412') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+	font-family: 'iconfont';
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	font-weight: normal;
+	font-style: normal;
+	speak: none;
+	text-decoration: inherit;
+	font-size: inherit;
+	text-transform: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*
+Glyphs list
+*/
+
+.icon-bank:before {
+	content: '\ea01';
+}
+
+.icon-building:before {
+	content: '\ea02';
+}
+
+.icon-cancel:before {
+	content: '\ea03';
+}
+
+.icon-commerce:before {
+	content: '\ea04';
+}
+
+.icon-developer:before {
+	content: '\ea05';
+}
+
+.icon-handshake:before {
+	content: '\ea06';
+}
+
+.icon-happy:before {
+	content: '\ea07';
+}
+
+.icon-help:before {
+	content: '\ea08';
+}
+
+.icon-instagram:before {
+	content: '\ea09';
+}
+
+.icon-new:before {
+	content: '\ea0a';
+}
+
+.icon-sale:before {
+	content: '\ea0b';
+}
+
+.icon-second:before {
+	content: '\ea0c';
+}
+
+.icon-telephone:before {
+	content: '\ea0d';
+}
+
+.icon-vk:before {
+	content: '\ea0e';
+}

@@ -1,0 +1,48 @@
+input[type="text"],
+textarea {
+	width 100%
+	padding 15px 20px
+	background-color #fff
+	font-family $font
+	font-size 14px
+	line-height 1
+	color $text
+	border 1px solid $gray
+	outline none
+	transition border .3s ease
+
+	&:focus {
+		border-color $top
+	}
+
+	@media screen and (min-width: $screen-sm) {
+		font-size 16px
+	}
+}
+
+textarea {
+	height 100px
+	resize none
+	font-family $font
+}
+
+.error {
+	border 1px solid #e84646 !important
+}
+
+.form {
+	&__row {
+		margin-bottom 15px
+	}
+
+	&__error {
+		text-align left
+		font-size 14px
+		line-height 20px
+		color #fff
+	}
+}
+
+.form__error.hidden {
+	display none
+}

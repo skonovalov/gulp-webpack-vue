@@ -1,0 +1,43 @@
+.container {
+	width 100%
+	padding-left $gutter
+	padding-right $gutter
+
+	@media screen and (min-width: $screen-xs) {
+		padding-left $gutter + 5px
+		padding-right $gutter + 5px
+	}
+
+	@media screen and (min-width: $screen-sm) {
+		width 980px
+		margin 0 auto
+		padding-left 20px
+		padding-right 20px
+	}
+
+	@media screen and (min-width: $screen-md) {
+		width 1320px
+	}
+}
+
+.visible-mobile,
+.visible-desktop {
+	display none
+}
+
+.block-sm {
+	display inline
+}
+
+@media screen and (max-width: $screen-sm - 1) {
+	.visible-mobile {
+		display block
+	}
+}
+
+@media screen and (min-width: $screen-sm) {
+	.visible-desktop,
+	.block-sm {
+		display block
+	}
+}

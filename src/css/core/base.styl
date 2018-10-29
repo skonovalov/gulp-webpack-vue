@@ -1,0 +1,80 @@
+*{
+	box-sizing border-box
+}
+
+html,
+body {
+	height 100%
+}
+
+body {
+	min-height 100%
+	font-family $font
+	font-size 16px
+	line-height 20px
+}
+
+img {
+	max-width 100%
+}
+
+h1 {
+	margin-bottom 30px
+	font-size 30px
+	line-height 30px
+	font-weight 500
+	color #fff
+
+	@media screen and (min-width: $screen-sm) {
+		margin-bottom 40px
+		font-size 32px
+		line-height 42px
+	}
+
+	@media screen and (min-width: $screen-sm) {
+		margin-bottom 40px
+		font-size 40px
+		line-height 60px
+	}
+}
+
+h2 {
+	margin-bottom 30px
+	font-size 22px
+	line-height 30px
+	font-weight 500
+	color $text
+
+	@media screen and (min-width: $screen-xs) {
+		margin-bottom 35px
+		font-size 24px
+	}
+
+	@media screen and (min-width: $screen-sm) {
+		margin-bottom 40px
+		font-size 30px
+		line-height 42px
+	}
+}
+
+h4 {
+	font-size 18px
+	line-height 25px
+	color $text
+}
+
+p {
+	margin-bottom 20px
+	color $light-text
+
+	@media screen and (min-width: $screen-sm) {
+		margin-bottom 30px
+		font-size 18px
+		line-height 30px
+	}
+}
+
+ul {
+	padding-left 0
+	list-style none
+}

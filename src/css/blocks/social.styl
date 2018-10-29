@@ -1,0 +1,33 @@
+.social {
+	display inline-block
+	vertical-align middle
+	width 30px
+	height @width
+	background $light-text
+	border-radius 50%
+	text-align center
+	transition background-color .2s ease
+
+	img {
+		position relative
+		top 6px
+		width 60%
+	}
+
+	&:hover {
+		background-color $top
+	}
+
+	& + & {
+		margin-left 10px
+	}
+
+	@media screen and (min-width: $screen-sm) {
+		width 40px
+		height @width
+
+		img {
+			top 8px
+		}
+	}
+}

@@ -1,0 +1,50 @@
+.alert {
+	position fixed
+	top 0
+	left 0
+	z-index 99
+	width 100%
+	font-size 14px
+	line-height 20px
+	color #fff
+	transform translateY(-100px)
+	transition all .3s ease
+}
+
+.alert-success,
+.alert-error {
+	display none
+	opacity 0
+	visibility hidden
+	padding 10px 0
+}
+
+.alert-success	{
+	background-color #8bc34a
+}
+
+.alert-error {
+	background-color #e91e63
+}
+
+.alert.visible {
+	transform translateY(0)
+}
+
+.alert.error {
+	border 0 !important
+
+	.alert-error {
+		display block
+		visibility visible
+		opacity 1
+	}
+}
+
+.alert.success {
+	.alert-success {
+		display block
+		visibility visible
+		opacity 1
+	}
+}

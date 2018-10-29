@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>АСТА недвижимость</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="page">
+	<div class="page__wrapper">
+
+		{% include '../partials/header.njk'%}
+
+		<div class="page__content">
+			{% block content %}
+			{% endblock %}
+		</div>
+
+		{% include '../partials/footer.njk'%}
+	</div>
+
+	{% block scripts %}
+		<script src="./js/common.js"></script>
+		<script src="./js/index.js"></script>
+	{% endblock %}
+
+	<span data-screen='mobile' class="visible-mobile"></span>
+	<span data-screen='desktop' class="visible-desktop"></span>
+
+	<div class="call" id="call">
+		<h3>Позвонить вам?</h3>
+
+		<div class="call__form" id="call-form">
+			<div id="call-form" class="call__wrap">
+				<button class="call__close" id="close-call" type="button"></button>
+				<div class="form__row">
+					<label>
+						<input type="text" name="name" placeholder="Имя *" autocomplete="off">
+					</label>
+				</div>
+				<div class="form__row">
+					<label>
+						<input type="text" name="phone" placeholder="Телефон *" autocomplete="off">
+					</label>
+				</div>
+				<div class="form__row">
+					<label>
+						<textarea name="message" placeholder="Комментарий" autocomplete="off"></textarea>
+					</label>
+				</div>
+
+				<div class="form__row form__error hidden"></div>
+
+				<button type="button" class="btn btn--footer" id="submit-call">
+					<span>Жду звонка</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="alert" id="alert">
+		<div class="alert-success">
+			<div class="container">
+				Ваше сообщение успешно отправлено.
+			</div>
+		</div>
+		<div class="alert-error">
+			<div class="container">
+				Произошла ошибка, попробуйте позже. !
+			</div>
+		</div>
+	</div>
+</body>
+</html>
